@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -19,14 +20,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function(){
-    return view('hai');
-});
-
-Route::get('/parent', function(){
-    return view('admin.parent');
-});
-
-Route::resource('/about', AboutController::class);
-
-Route::get('/profile-index', [ProfileController::class, 'index'])->name('PROFILEKAHVVOC');
+route::resource('admin', AdminController::class);
