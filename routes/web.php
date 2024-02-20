@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -20,4 +21,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-route::resource('admin', AdminController::class);
+route::resource('admin',AdminController::class);
+
+//route category
+Route::resource('category', CategoryController::class);
